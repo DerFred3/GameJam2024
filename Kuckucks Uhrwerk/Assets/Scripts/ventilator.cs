@@ -4,27 +4,25 @@ using UnityEngine;
 
 public class ventilator : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [SerializeField] private Transform ventilatorOrigin;
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        
         if (other.gameObject.tag == "Player")
         {
             Debug.Log("Penis");
-            Rigidbody2D rb = GameObject.Find("Player").GetComponent<Rigidbody2D>();
-            rb.velocity += 100f*(Vector2)(other.transform.position - transform.position);
+            VehicleMovement movement = other.transform.root.GetComponent<VehicleMovement>();
+            movement.velocityOffset = 1f*(transform.position - ventilatorOrigin.position);
         }
-           
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            Debug.Log("Penis out!");
+            VehicleMovement movement = other.transform.root.GetComponent<VehicleMovement>();
+            movement.velocityOffset = Vector3.zero;
+        }
     }
 }
