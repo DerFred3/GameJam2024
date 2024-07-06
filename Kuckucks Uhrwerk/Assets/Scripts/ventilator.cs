@@ -16,9 +16,15 @@ public class ventilator : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerStay2D(Collider2D other)
     {
-        other.attachedRigidbody.AddForce(new Vector2(2f, 0f));
-        Debug.Log("Penis");
+        
+        if (other.gameObject.tag == "Player")
+        {
+            Debug.Log("Penis");
+            Rigidbody2D rb = GameObject.Find("Player").GetComponent<Rigidbody2D>();
+            rb.velocity += 100f*(Vector2)(other.transform.position - transform.position);
+        }
+           
     }
 }
