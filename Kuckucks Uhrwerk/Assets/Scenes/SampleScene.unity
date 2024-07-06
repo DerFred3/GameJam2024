@@ -300,6 +300,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2458166751266511701, guid: 2709919a71f253146a2a8e8e7d7bb00d, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 3640898638601000755, guid: 2709919a71f253146a2a8e8e7d7bb00d, type: 3}
       propertyPath: exitPortal
       value: 
@@ -673,7 +677,7 @@ GameObject:
   - component: {fileID: 846038153}
   - component: {fileID: 846038152}
   - component: {fileID: 846038151}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square (9)
   m_TagString: Ground
   m_Icon: {fileID: 0}

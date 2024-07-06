@@ -7,7 +7,6 @@ public class PortalEntry : MonoBehaviour
     [SerializeField] private Transform exitPortal;
 
     private GameObject trackedObject;
-    private Vector2 positionEntered;
     private GameObject ghostInstance;
     private Vector2 trackedObjectGhostOffset;
 
@@ -24,7 +23,6 @@ public class PortalEntry : MonoBehaviour
         if (other.tag != "Player") return;
 
         trackedObject = other.transform.root.gameObject;
-        positionEntered = trackedObject.transform.position;
 
         Vector2 differenceTrackedPortal = transform.position - trackedObject.transform.position;
 
