@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class CrankHandle : MonoBehaviour
 {
+    [SerializeField] private Camera cam;
     [SerializeField] private RectTransform crank;
     [SerializeField] private float crankMoveMultiplier;
 
     [SerializeField] private float angleLimit;
-
-    private Vector3 mousePosition;
+    
+    private Vector2 mouseVector;
 
     private bool clickable = true;
 
@@ -24,24 +25,24 @@ public class CrankHandle : MonoBehaviour
 
     private void OnMouseDown()
     {
-        mousePosition = Input.mousePosition;
+        Vector3 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+        mouseVector = (mousePos - transform.position).normalized;
     }
 
     private void OnMouseDrag()
     {
         if (!clickable) return;
 
-        if (mousePosition.x != Input.mousePosition.x)
-        {
-            float xDiff = mousePosition.x - Input.mousePosition.x;
-            Vector3 rotation = crank.localEulerAngles;
-            rotation.z += xDiff * crankMoveMultiplier;
+        Vector3 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+        float mouseDragAngle = Vector2.SignedAngle(mouseVector, (mousePos - transform.position).normalized);
+        mouseVector = (mousePos - transform.position).normalized;
 
-            rotation.z = Mathf.Clamp(rotation.z, 0f, angleLimit * 2);
+        Vector3 rotation = crank.localEulerAngles;
+        rotation.z += mouseDragAngle * crankMoveMultiplier;
 
-            crank.localRotation = Quaternion.Euler(rotation);
-        }
-        mousePosition = Input.mousePosition;
+        rotation.z = Mathf.Clamp(rotation.z, 0f, angleLimit * 2);
+
+        crank.localRotation = Quaternion.Euler(rotation);
     }
 
     /// <summary>
