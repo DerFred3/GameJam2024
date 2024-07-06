@@ -2,10 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GlobalVariables : MonoBehaviour
+public class PortalExit : MonoBehaviour
 {
-    
-    public static float globalRotation = 0.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,12 +14,5 @@ public class GlobalVariables : MonoBehaviour
     void Update()
     {
         
-    }
-    void FixedUpdate(){
-        if(globalRotation >= 90.0f){
-            globalRotation = -90.0f;
-        }
-        globalRotation += 1f;
-       
     }
 }
