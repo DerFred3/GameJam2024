@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Checkpoint : MonoBehaviour
@@ -11,7 +8,7 @@ public class Checkpoint : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            var script = other.GetComponent<RespawnBehaviour>();
+            var script = other.GetComponentInParent<RespawnBehaviour>();
             if (!script)
             {
                 throw new MissingComponentException("Player misses RespawnBehaviour!");

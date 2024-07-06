@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,12 +26,20 @@ public class RespawnBehaviour : MonoBehaviour
 
         _currentCheckpointPriority = priority;
         _currentSpawnPosition = position;
-        Debug.Log("Set new checkpoint");
+        Debug.Log("enter checkpoint");
     }
 
-    public void OnDeath()
+    private void OnDeath()
     {
         _attempts++;
-        transform.position = _currentSpawnPosition.position;
+        transform.position = _currentSpawnPosition.position + Vector3.up;
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.transform.CompareTag("KillObject"))
+        {
+            OnDeath();
+        }
     }
 }
