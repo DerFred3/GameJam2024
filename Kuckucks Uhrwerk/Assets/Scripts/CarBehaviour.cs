@@ -28,7 +28,8 @@ public class CarBehaviour : MonoBehaviour
             if (!isOnGround())
             {
                 rb.freezeRotation = true;
-                transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));            }
+                transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));            
+            }
             else { 
                 rb.freezeRotation=false;
             }
