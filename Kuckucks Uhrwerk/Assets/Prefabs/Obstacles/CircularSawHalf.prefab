@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2702376675638124598}
   - component: {fileID: 4797311673377260352}
   - component: {fileID: 2014758227362443062}
+  - component: {fileID: 1402099600672619898}
   m_Layer: 0
   m_Name: CircularSawHalf
   m_TagString: Untagged
@@ -106,3 +107,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1402099600672619898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2672313823388381049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0892326b1e7a66f24a8da701eca9b65b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  point1: {x: 0, y: 0}
+  point2: {x: 0, y: 0}
+  speed: 0
+  movementType: 0
