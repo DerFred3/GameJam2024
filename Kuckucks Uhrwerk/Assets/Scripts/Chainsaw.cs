@@ -40,7 +40,7 @@ public class Chainsaw : MonoBehaviour
         switch (movementType)
         {
             case MovementTypes.Linear:
-                currentPosition += BASE_SPEED * speed * direction;
+                currentPosition += BASE_SPEED * speed * direction * Time.deltaTime;
         
                 if (currentPosition >= 1)
                 {
@@ -52,7 +52,7 @@ public class Chainsaw : MonoBehaviour
                 transform.position = Vector2.Lerp(point1, point2, currentPosition);
                 break;
             case MovementTypes.EaseInEaseOut:
-                sinus += BASE_SPEED * speed;
+                sinus += BASE_SPEED * speed * Time.deltaTime;
                 transform.position = Vector2.Lerp(point1, point2, (float)Math.Abs(LerpValue(sinus))); //currentPosition);
                 break;
         }
