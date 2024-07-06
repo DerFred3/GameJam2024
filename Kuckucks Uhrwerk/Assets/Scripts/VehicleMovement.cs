@@ -12,6 +12,8 @@ public class VehicleMovement : MonoBehaviour
     private float speedMultiplier;
     private float boostMultiplier = 0f;
 
+    public Vector3 velocityOffset = Vector3.zero;
+
     private Rigidbody2D rb;
     private List<GameObject> currentlyTouching = new List<GameObject>();
 
@@ -24,11 +26,19 @@ public class VehicleMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (currentlyTouching.Count <= 0) return;
+        if (currentlyTouching.Count <= 0)
+        {
+            // Only apply velocity offset(s)
+            Vector3 velocity = rb.velocity;
+            velocity += velocityOffset;
+            rb.velocity = velocity;
+        }
+        else
+        {
+            speedMultiplier = crankHandle.GetCurrentValue(speedMultiplierMinimum, speedMultiplierMaximum);
 
-        speedMultiplier = crankHandle.GetCurrentValue(speedMultiplierMinimum, speedMultiplierMaximum);
-
-        rb.velocity = movementDirection * speedMultiplier * boostMultiplier * Time.deltaTime;
+            rb.velocity = movementDirection * speedMultiplier * boostMultiplier * Time.deltaTime + velocityOffset;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

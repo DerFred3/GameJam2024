@@ -2,15 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CrankHandle : MonoBehaviour
+public class SpeedCrankHandle : MonoBehaviour
 {
-    [SerializeField] private Camera cam;
     [SerializeField] private RectTransform crank;
     [SerializeField] private float crankMoveMultiplier;
 
     [SerializeField] private float angleLimit;
-    
-    private Vector2 mouseVector;
+
+    private Vector3 mousePosition;
 
     private bool clickable = true;
 
@@ -25,24 +24,24 @@ public class CrankHandle : MonoBehaviour
 
     private void OnMouseDown()
     {
-        Vector3 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-        mouseVector = (mousePos - transform.position).normalized;
+        mousePosition = Input.mousePosition;
     }
 
     private void OnMouseDrag()
     {
         if (!clickable) return;
 
-        Vector3 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-        float mouseDragAngle = Vector2.SignedAngle(mouseVector, (mousePos - transform.position).normalized);
-        mouseVector = (mousePos - transform.position).normalized;
+        if (mousePosition.x != Input.mousePosition.x)
+        {
+            float xDiff = mousePosition.x - Input.mousePosition.x;
+            Vector3 rotation = crank.localEulerAngles;
+            rotation.z += xDiff * crankMoveMultiplier;
 
-        Vector3 rotation = crank.localEulerAngles;
-        rotation.z += mouseDragAngle * crankMoveMultiplier;
+            rotation.z = Mathf.Clamp(rotation.z, 0f, angleLimit * 2);
 
-        rotation.z = Mathf.Clamp(rotation.z, 0f, angleLimit * 2);
-
-        crank.localRotation = Quaternion.Euler(rotation);
+            crank.localRotation = Quaternion.Euler(rotation);
+        }
+        mousePosition = Input.mousePosition;
     }
 
     /// <summary>
@@ -51,7 +50,7 @@ public class CrankHandle : MonoBehaviour
     /// <param name="min">Min value will be achieved when turning the crank completely to the left.</param>
     /// <param name="max">Max value will be achieved when turning the crank completely to the right.</param>
     /// <returns></returns>
-    public float GetCurrentValue(float min, float max)
+    public float GetCurrentValue(int min, int max)
     {
         return Mathf.Lerp(max, min, crank.localEulerAngles.z / (angleLimit * 2));
     }
