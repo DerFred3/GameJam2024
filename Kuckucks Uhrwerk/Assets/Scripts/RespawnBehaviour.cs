@@ -26,7 +26,6 @@ public class RespawnBehaviour : MonoBehaviour
 
         _currentCheckpointPriority = priority;
         _currentSpawnPosition = position;
-        Debug.Log("enter checkpoint");
     }
 
     private void OnDeath()
