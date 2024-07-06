@@ -5,7 +5,8 @@ using UnityEngine;
 public class GlobalVariables : MonoBehaviour
 {
     
-    public static float globalRotation = 0.0f;
+    public float globalRotation = 0.0f;
+    public float globalRotationScale = 10.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,10 +19,10 @@ public class GlobalVariables : MonoBehaviour
         
     }
     void FixedUpdate(){
-        if(globalRotation >= 90.0f){
-            globalRotation = -90.0f;
-        }
-        globalRotation += 1f;
+        //if(globalRotation >= 90.0f){
+        //    globalRotation = -90.0f;
+        //}
+        //globalRotation += 1f;
        
     }
 }
