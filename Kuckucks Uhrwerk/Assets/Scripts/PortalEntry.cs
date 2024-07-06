@@ -6,16 +6,7 @@ public class PortalEntry : MonoBehaviour
 {
     [SerializeField] private Transform exitPortal;
 
-    private enum EnterDirection
-    {
-        Left,
-        Right,
-    }
-
     private GameObject trackedObject;
-    private BoxCollider2D trackedCollider;
-    private Vector2 positionEntered;
-    private EnterDirection enterDirection;
     private GameObject ghostInstance;
     private Vector2 trackedObjectGhostOffset;
 
@@ -29,9 +20,9 @@ public class PortalEntry : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        trackedObject = other.gameObject;
-        trackedCollider = (BoxCollider2D)other;
-        positionEntered = trackedObject.transform.position;
+        if (other.tag != "Player") return;
+
+        trackedObject = other.transform.root.gameObject;
 
         Vector2 differenceTrackedPortal = transform.position - trackedObject.transform.position;
 
@@ -40,19 +31,11 @@ public class PortalEntry : MonoBehaviour
             trackedObject.transform.rotation);
 
         trackedObjectGhostOffset = trackedObject.transform.position - ghostInstance.transform.position;
-
-        if (positionEntered.x < transform.position.x)
-        {
-            enterDirection = EnterDirection.Left;
-        } 
-        else
-        {
-            enterDirection = EnterDirection.Right;
-        }
     }
 
-    private void OnTriggerExit2D()
+    private void OnTriggerExit2D(Collider2D other)
     {
+        if (other.tag != "Player") return;
         trackedObject.transform.position = ghostInstance.transform.position;
 
         trackedObject = null;
