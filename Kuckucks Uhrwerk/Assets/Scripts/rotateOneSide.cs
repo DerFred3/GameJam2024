@@ -4,53 +4,49 @@ using UnityEngine;
 
 public class rotateOneSide : MonoBehaviour
 {
-    public bool leftSide = true;
-    public Vector3 objectToRotate;
+    [SerializeField] private Transform platform;
+    [SerializeField] private Transform pivot;
+    [SerializeField] private CrankHandle globalCrank;
+    [SerializeField] private PivotOrientation pivotOrientation;
 
-    private GlobalVariables globalVariables;
+    float orientationFactor = 1f;
 
-    public Vector3 rotationAxis;
-    Vector3 direction;
-
-    public
-    // Start is called before the first frame update
-    void Start()
+    private enum PivotOrientation
     {
-        objectToRotate = leftSide? transform.position - transform.right* transform.localScale.x/2 : transform.position + transform.right* transform.localScale.x / 2;
-        direction = transform.position - objectToRotate;
-        globalVariables = GameObject.Find("GameState").GetComponent<GlobalVariables>();
+        Left,
+        Middle,
+        Right,
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
         
+
+        switch (pivotOrientation)
+        {
+            case PivotOrientation.Left:
+                orientationFactor = platform.localScale.x / 2;
+                break;
+            case PivotOrientation.Middle:
+                orientationFactor = 0f;
+                break;
+            case PivotOrientation.Right:
+                orientationFactor = -(platform.localScale.x / 2);
+                break;
+        }
     }
 
-    void FixedUpdate(){
+    void Update()
+    {
+        Vector3 platformRotation = platform.eulerAngles;
+        platformRotation.z = -globalCrank.GetCurrentValue(-90f, 90f);
+        platform.rotation = Quaternion.Euler(platformRotation);
 
-        Quaternion rot = Quaternion.AngleAxis(globalVariables.globalRotationScale*globalVariables.globalRotation, new Vector3(0.0f,0.0f,1.0f));
-        transform.position = objectToRotate + rot * direction;
-        transform.localRotation = rot;
+        Vector3 platformPosition = pivot.position;
+        
 
-        //transform.RotateAround(objectToRotate, Vector3.forward, globalVariables.globalRotationScale * globalVariables.globalRotation);
-        //transform.Rotate(0.0f, 0.0f, globalVariables.globalRotationScale * globalVariables.globalRotation, Space.World);
-
-       /*if (transform.eulerAngles.z > 90.0f)
-        {
-            transform.eulerAngles = new Vector3(
-            transform.eulerAngles.x,
-            transform.eulerAngles.y,
-            90.0f
-            );
-        }
-        if (transform.eulerAngles.z < -90.0f)
-        {
-            transform.eulerAngles = new Vector3(
-            transform.eulerAngles.x,
-            transform.eulerAngles.y,
-            -90.0f
-            );
-        }*/
+        platformPosition.x += Mathf.Sin(globalCrank.GetCurrentValue(0, Mathf.PI)) * orientationFactor;
+        platformPosition.y += Mathf.Cos(globalCrank.GetCurrentValue(0, Mathf.PI)) * orientationFactor;
+        platform.position = platformPosition;
     }
 }
