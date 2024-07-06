@@ -852,14 +852,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 484983164}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.33290178, w: 0.9429615}
-  m_LocalPosition: {x: -5, y: 3, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: -0.32581562, w: 0.9454333}
+  m_LocalPosition: {x: 3.3, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1847087190}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 38.89}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -38.03}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1254,7 +1254,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &975592102
 Transform:
   m_ObjectHideFlags: 0
@@ -1479,8 +1479,20 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1545328120268564854, guid: 4f5174aea0075b341a2ee7ae1f349559, type: 3}
+      propertyPath: speedMultiplier
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 1942597220084242693, guid: 4f5174aea0075b341a2ee7ae1f349559, type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1942597220084242693, guid: 4f5174aea0075b341a2ee7ae1f349559, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2639867040325304388, guid: 4f5174aea0075b341a2ee7ae1f349559, type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 3735715682926507714, guid: 4f5174aea0075b341a2ee7ae1f349559, type: 3}
@@ -1874,7 +1886,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2062184453}
-  - {fileID: 306156798}
   m_Father: {fileID: 975592102}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1847087189
@@ -1892,7 +1903,7 @@ GameObject:
   - component: {fileID: 1847087194}
   m_Layer: 0
   m_Name: Capsule
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2367,3 +2378,4 @@ SceneRoots:
   - {fileID: 867867659}
   - {fileID: 975592102}
   - {fileID: 484983168}
+  - {fileID: 1145069425}
