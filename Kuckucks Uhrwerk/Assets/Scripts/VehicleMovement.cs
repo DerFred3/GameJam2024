@@ -26,11 +26,19 @@ public class VehicleMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (currentlyTouching.Count <= 0) return;
+        if (currentlyTouching.Count <= 0)
+        {
+            // Only apply velocity offset(s)
+            Vector3 velocity = rb.velocity;
+            velocity += velocityOffset;
+            rb.velocity = velocity;
+        }
+        else
+        {
+            speedMultiplier = crankHandle.GetCurrentValue(speedMultiplierMinimum, speedMultiplierMaximum);
 
-        speedMultiplier = crankHandle.GetCurrentValue(speedMultiplierMinimum, speedMultiplierMaximum);
-
-        rb.velocity = movementDirection * speedMultiplier * boostMultiplier * Time.deltaTime + velocityOffset;
+            rb.velocity = movementDirection * speedMultiplier * boostMultiplier * Time.deltaTime + velocityOffset;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

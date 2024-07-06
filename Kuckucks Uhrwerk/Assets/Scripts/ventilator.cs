@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class ventilator : MonoBehaviour
 {
+    [SerializeField] private CrankHandle globalCrankHandle;
     [SerializeField] private Transform ventilatorOrigin;
+    [SerializeField] private float ventilatorStrengthMinimum;
+    [SerializeField] private float ventilatorStrengthMaximum;
 
     private void OnTriggerStay2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
         {
-            Debug.Log("Penis");
             VehicleMovement movement = other.transform.root.GetComponent<VehicleMovement>();
-            movement.velocityOffset = 1f*(transform.position - ventilatorOrigin.position);
+            movement.velocityOffset = (globalCrankHandle.GetCurrentValue(ventilatorStrengthMinimum, ventilatorStrengthMaximum) * 
+                (transform.position - ventilatorOrigin.position)) / (other.transform.position - ventilatorOrigin.position).magnitude;
         }
     }
 
@@ -20,7 +23,6 @@ public class ventilator : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            Debug.Log("Penis out!");
             VehicleMovement movement = other.transform.root.GetComponent<VehicleMovement>();
             movement.velocityOffset = Vector3.zero;
         }

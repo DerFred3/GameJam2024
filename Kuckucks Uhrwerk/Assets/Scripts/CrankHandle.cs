@@ -51,7 +51,7 @@ public class CrankHandle : MonoBehaviour
     /// <param name="min">Min value will be achieved when turning the crank completely to the left.</param>
     /// <param name="max">Max value will be achieved when turning the crank completely to the right.</param>
     /// <returns></returns>
-    public float GetCurrentValue(int min, int max)
+    public float GetCurrentValue(float min, float max)
     {
         return Mathf.Lerp(max, min, crank.localEulerAngles.z / (angleLimit * 2));
     }
