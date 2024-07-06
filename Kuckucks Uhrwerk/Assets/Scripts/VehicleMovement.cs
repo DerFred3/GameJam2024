@@ -20,7 +20,7 @@ public class VehicleMovement : MonoBehaviour
         defaultSpeed = speedMultiplier;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (currentlyTouching.Count <= 0) return;
         rb.velocity = movementDirection * speedMultiplier * Time.deltaTime;
