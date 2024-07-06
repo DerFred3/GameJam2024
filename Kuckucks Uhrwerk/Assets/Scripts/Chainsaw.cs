@@ -24,11 +24,10 @@ public class Chainsaw : MonoBehaviour
     
     void Start()
     {
-        transform.position = point1;
         if (point1.Equals(point2))
         {
             isStatic = true;
-        } 
+        }
     }
 
     private float sinus = 0;
@@ -53,7 +52,7 @@ public class Chainsaw : MonoBehaviour
                 break;
             case MovementTypes.EaseInEaseOut:
                 sinus += BASE_SPEED * speed * Time.deltaTime;
-                transform.position = Vector2.Lerp(point1, point2, (float)Math.Abs(LerpValue(sinus))); //currentPosition);
+                transform.position = Vector2.Lerp(point1, point2, (float)Math.Abs(LerpValue(sinus)));
                 break;
         }
     }
@@ -63,4 +62,5 @@ public class Chainsaw : MonoBehaviour
         double degree = i % (Math.PI * 2);
         return 0.5* (1 + Math.Sin(2 * Math.PI * degree));
     }
+    
 }

@@ -7,11 +7,11 @@ public class GlobalVariables : MonoBehaviour
     
     public float globalRotation = 0.0f;
     public float globalRotationScale = 10.0f;
-    private CrankHandle crankHandle;
+    public CrankHandle crankHandle;
     // Start is called before the first frame update
     void Start()
     {
-        crankHandle = GameObject.Find("Crank").GetComponent<CrankHandle>();
+
     }
 
     // Update is called once per frame
