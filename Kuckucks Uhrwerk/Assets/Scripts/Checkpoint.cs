@@ -16,7 +16,7 @@ public class Checkpoint : MonoBehaviour
             {
                 throw new MissingComponentException("Player misses RespawnBehaviour!");
             }
-            script.EnterCheckpoint();
+            script.EnterCheckpoint(priority, transform);
         }
     }
 }
