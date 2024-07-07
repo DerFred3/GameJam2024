@@ -51,6 +51,9 @@ public class VehicleMovement : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         movementDirection = collision.transform.right;
+        movementDirection = new Vector3(Mathf.Abs(movementDirection.x), Mathf.Abs(movementDirection.y),
+            Mathf.Abs(movementDirection.z));
+        
         currentlyTouching.Add(collision.gameObject);
 
         switch (collision.gameObject.tag)
