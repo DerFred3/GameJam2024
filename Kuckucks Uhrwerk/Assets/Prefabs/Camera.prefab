@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 3752416586503701355}
   - component: {fileID: 943777002868763761}
   - component: {fileID: 2668854875586133903}
-  - component: {fileID: 5364409669400990839}
+  - component: {fileID: 716541323688306269}
+  - component: {fileID: 2127843995944278927}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -138,7 +139,7 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
---- !u!114 &5364409669400990839
+--- !u!114 &716541323688306269
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,8 +148,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 349647002803548312}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 463c3dd31a9e6ea49baab05a756fc8ca, type: 3}
+  m_Script: {fileID: 11500000, guid: b05c650dc8b9c95018ffb75b5abe6f82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   transformToFollow: {fileID: 0}
   speedCrank: {fileID: 0}
+--- !u!114 &2127843995944278927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 349647002803548312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b96a463a19826bc44b94b2552c5e01bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 3752416586503701355}
+  leftCrank: {fileID: 0}
+  rightCrank: {fileID: 0}
+  referencePivotPrefab: {fileID: 6025790506893898730, guid: 8267478442b67724fbef9a31263e963a, type: 3}
+  pivotPointOffset: {x: 0, y: -0.5}
+  crankMoveMultiplier: 0.2
+  angleLimit: 135
+  TrackingActive: 1
