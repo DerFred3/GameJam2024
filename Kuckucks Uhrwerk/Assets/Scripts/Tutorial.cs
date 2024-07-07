@@ -11,8 +11,8 @@ public class Tutorial : MonoBehaviour
     [SerializeField] private TextMeshProUGUI text;
     [SerializeField] private Image speedCrank, globalCrank;
     
-    private const string SpeedCrank = "Use this crank to controll the velocity.";
-    private const string GlobalCrank = "Use this crank to interact with objects on the route.";
+    private const string SpeedCrank = "Use this crank (left mouse button) to controll the velocity.";
+    private const string GlobalCrank = "Use this crank (right mouse button) to interact with objects on the route.";
     private const string Goal = "Reach the end before the Kuckuck wakes up and gets you.";
     private const string GoodLuck = "Good luck!";
 
@@ -27,7 +27,7 @@ public class Tutorial : MonoBehaviour
     }
 
     private IEnumerator ShowTutorial() {
-        const float typeSpeed = .1f;
+        const float typeSpeed = .05f;
         
         string label = "";
 
