@@ -21,6 +21,7 @@ public class GameTimer : MonoBehaviour
     {
         while (_elapsedTime++ < timeLimit)
         {
+            EndSceneData.ElapsedTime = _elapsedTime;
             yield return new WaitForSeconds(1);
             timerDisplay.text = timeLimit - _elapsedTime + "s";
         }
