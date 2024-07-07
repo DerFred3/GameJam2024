@@ -71,6 +71,8 @@ public class VehicleMovement : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
+        if (collision.gameObject.tag != "RotatingPlatform") return;
+
         float angleOfPlatform = collision.transform.parent.eulerAngles.z % 360;
         if (angleOfPlatform > 80f && angleOfPlatform < 270)
         {

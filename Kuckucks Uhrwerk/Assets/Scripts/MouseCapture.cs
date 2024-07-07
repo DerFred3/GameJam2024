@@ -56,6 +56,7 @@ public class MouseCapture : MonoBehaviour
             mouseVector = (mousePos - pivotPoint).normalized;
 
             // Show reference pivot
+            if (activeReferencePivot != null) Destroy(activeReferencePivot);
             activeReferencePivot = Instantiate(referencePivotPrefab, pivotPoint, Quaternion.identity, transform);
         }
 
@@ -70,6 +71,7 @@ public class MouseCapture : MonoBehaviour
             mouseVector = (mousePos - pivotPoint).normalized;
 
             // Show reference pivot
+            if (activeReferencePivot != null) Destroy(activeReferencePivot);
             activeReferencePivot = Instantiate(referencePivotPrefab, pivotPoint, Quaternion.identity, transform);
         }
 
