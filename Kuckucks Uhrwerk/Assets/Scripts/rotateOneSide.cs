@@ -10,6 +10,7 @@ public class rotateOneSide : MonoBehaviour
     [SerializeField] private PivotOrientation pivotOrientation;
 
     float orientationFactor = 1f;
+    private BoxCollider2D platformCollider;
 
     private enum PivotOrientation
     {
@@ -20,18 +21,18 @@ public class rotateOneSide : MonoBehaviour
 
     private void Start()
     {
-        
+        platformCollider = platform.GetComponent<BoxCollider2D>();
 
         switch (pivotOrientation)
         {
             case PivotOrientation.Left:
-                orientationFactor = platform.localScale.x / 2;
+                orientationFactor = platformCollider.size.x / 2;
                 break;
             case PivotOrientation.Middle:
                 orientationFactor = 0f;
                 break;
             case PivotOrientation.Right:
-                orientationFactor = -(platform.localScale.x / 2);
+                orientationFactor = -(platformCollider.size.x / 2);
                 break;
         }
     }
@@ -44,9 +45,15 @@ public class rotateOneSide : MonoBehaviour
 
         Vector3 platformPosition = pivot.position;
         
-
         platformPosition.x += Mathf.Sin(globalCrank.GetCurrentValue(0, Mathf.PI)) * orientationFactor;
         platformPosition.y += Mathf.Cos(globalCrank.GetCurrentValue(0, Mathf.PI)) * orientationFactor;
         platform.position = platformPosition;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+
+        Gizmos.DrawSphere(pivot.position, 0.1f);
     }
 }
