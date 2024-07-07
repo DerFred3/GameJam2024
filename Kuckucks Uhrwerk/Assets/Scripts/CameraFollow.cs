@@ -12,6 +12,8 @@ public class CameraFollow : MonoBehaviour
 
     private void Update()
     {
+        if (transformToFollow == null) return;
+
         float followStiffness = speedCrank.GetCurrentValue(followStiffnessMaximum, followStiffnessMinimum);
         Vector2 newPosition = Vector2.Lerp(transform.position, transformToFollow.position, Time.deltaTime * followStiffness);
         transform.position = new Vector3(newPosition.x, newPosition.y, transform.position.z);

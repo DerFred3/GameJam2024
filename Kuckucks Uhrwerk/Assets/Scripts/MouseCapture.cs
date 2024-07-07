@@ -6,6 +6,7 @@ public class MouseCapture : MonoBehaviour
     [SerializeField] private Camera cam;
     [SerializeField] private RectTransform leftCrank;
     [SerializeField] private RectTransform rightCrank;
+    [SerializeField] private GameObject referencePivotPrefab;
 
     [Header("Settings")]
     [SerializeField] private Vector2 pivotPointOffset;
@@ -22,6 +23,8 @@ public class MouseCapture : MonoBehaviour
     private Vector2 pivotPoint;
     private Vector2 pivotPointRelativeToCam;
 
+    private GameObject activeReferencePivot;
+
     private void Update()
     {
         if (!TrackingActive) return;
@@ -30,12 +33,16 @@ public class MouseCapture : MonoBehaviour
         if (Input.GetMouseButtonUp(0))
         {
             leftButton = false;
+
+            if (activeReferencePivot != null) Destroy(activeReferencePivot);
         }
 
         // Right-click up
         if (Input.GetMouseButtonUp(1))
         {
             rightButton = false;
+
+            if (activeReferencePivot != null) Destroy(activeReferencePivot);
         }
 
         // Left-click down
@@ -47,6 +54,9 @@ public class MouseCapture : MonoBehaviour
             pivotPoint = mousePos + pivotPointOffset;
             pivotPointRelativeToCam = pivotPoint - (Vector2)cam.transform.position;
             mouseVector = (mousePos - pivotPoint).normalized;
+
+            // Show reference pivot
+            activeReferencePivot = Instantiate(referencePivotPrefab, pivotPoint, Quaternion.identity, transform);
         }
 
         // Right-click down
@@ -58,6 +68,9 @@ public class MouseCapture : MonoBehaviour
             pivotPoint = mousePos + pivotPointOffset;
             pivotPointRelativeToCam = pivotPoint - (Vector2)cam.transform.position;
             mouseVector = (mousePos - pivotPoint).normalized;
+
+            // Show reference pivot
+            activeReferencePivot = Instantiate(referencePivotPrefab, pivotPoint, Quaternion.identity, transform);
         }
 
         // Move pivotPoint with cam; keep it relative to cam position
@@ -85,12 +98,5 @@ public class MouseCapture : MonoBehaviour
             rotation.z = Mathf.Clamp(rotation.z, 0f, angleLimit * 2);
             rightCrank.localRotation = Quaternion.Euler(rotation);
         }
-    }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-
-        if (pivotPoint != null) Gizmos.DrawSphere(pivotPoint, 0.1f);
     }
 }
