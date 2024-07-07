@@ -67,7 +67,6 @@ public class VehicleMovement : MonoBehaviour
         float angleOfPlatform = collision.transform.parent.eulerAngles.z % 360;
         if (angleOfPlatform > 80f && angleOfPlatform < 270)
         {
-            Debug.Log("Removing platform from touching things");
             currentlyTouching.Remove(collision.gameObject);
         }
     }
