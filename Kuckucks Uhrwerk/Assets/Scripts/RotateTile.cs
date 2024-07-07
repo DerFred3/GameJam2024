@@ -15,6 +15,6 @@ public class RotateTile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        gameObject.transform.eulerAngles = new Vector3(0,0, globalVariables.globalRotationScale*globalVariables.globalRotation+rotationAngle);
+        gameObject.transform.eulerAngles = new Vector3(0,0, -globalVariables.globalRotationScale*globalVariables.globalRotation+rotationAngle);
     }
 }
