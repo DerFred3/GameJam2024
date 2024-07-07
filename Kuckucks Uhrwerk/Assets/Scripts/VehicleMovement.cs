@@ -62,6 +62,16 @@ public class VehicleMovement : MonoBehaviour
         }
     }
 
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        float angleOfPlatform = collision.transform.parent.eulerAngles.z % 360;
+        if (angleOfPlatform > 80f && angleOfPlatform < 270)
+        {
+            Debug.Log("Removing platform from touching things");
+            currentlyTouching.Remove(collision.gameObject);
+        }
+    }
+
     private void OnCollisionExit2D(Collision2D collision)
     {
         currentlyTouching.Remove(collision.gameObject);

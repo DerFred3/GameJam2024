@@ -21,7 +21,7 @@ public class rotateOneSide : MonoBehaviour
 
     private void Start()
     {
-        platformCollider = platform.GetComponent<BoxCollider2D>();
+        platformCollider = platform.GetComponentInChildren<BoxCollider2D>();
 
         switch (pivotOrientation)
         {
