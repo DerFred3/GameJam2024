@@ -9,6 +9,7 @@ public class Finish : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            EndSceneData.DidWin = true;
             SceneManager.LoadScene(endScene);
         }
     }

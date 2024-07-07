@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2458166751266511701}
   - component: {fileID: 1012994231651558589}
   - component: {fileID: 3640898638601000755}
-  - component: {fileID: 3166603805736533681}
+  - component: {fileID: 4437826555494549070}
   m_Layer: 0
   m_Name: Portal
   m_TagString: Untagged
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 212056595, guid: 306702c1932ecc544aa056248b202957, type: 3}
+  m_Sprite: {fileID: 149910905, guid: 762fd1a673802e845af1cb2280e5ed7c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -173,27 +173,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   exitPortal: {fileID: 0}
---- !u!95 &3166603805736533681
-Animator:
-  serializedVersion: 5
+--- !u!111 &4437826555494549070
+Animation:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7437138223395169465}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b85e8fa3cfd8835f2966df0bf6a6b5fe, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: ad8709eb89c82f3f68d254d2935f67e8, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: ad8709eb89c82f3f68d254d2935f67e8, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &8635009438272200752
 GameObject:
   m_ObjectHideFlags: 0
@@ -204,7 +199,7 @@ GameObject:
   m_Component:
   - component: {fileID: 797656330042303013}
   m_Layer: 0
-  m_Name: PortalEntry
+  m_Name: PortalEntry Alternative
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
