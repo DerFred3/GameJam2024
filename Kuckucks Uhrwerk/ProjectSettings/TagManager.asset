@@ -8,6 +8,7 @@ TagManager:
   - Speed
   - Portal
   - KillObject
+  - RotatingPlatform
   layers:
   - Default
   - TransparentFX
