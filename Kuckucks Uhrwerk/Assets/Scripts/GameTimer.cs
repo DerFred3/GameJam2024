@@ -9,6 +9,7 @@ public class GameTimer : MonoBehaviour
     [SerializeField] private TextMeshProUGUI timerDisplay;
     private int _elapsedTime;
     public GameObject player;
+    public GameObject bird;
     
     // Start is called before the first frame update
     void Start()
@@ -33,7 +34,8 @@ public class GameTimer : MonoBehaviour
      //   SceneManager.LoadScene("EndScene");
 
      player.GetComponent<VehicleMovement>().enabled = false;
-     yield return new WaitForSeconds(6);
+     bird.GetComponent<Animator>().Play("Bird");
+     yield return new WaitForSeconds(5);
      SceneManager.LoadScene("EndScene");
     }
 }

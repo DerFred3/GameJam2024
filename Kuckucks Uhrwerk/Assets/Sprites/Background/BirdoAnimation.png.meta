@@ -1,0 +1,840 @@
+fileFormatVersion: 2
+guid: bdc66f2da7816e261a2f51dab6a35a79
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BirdoAnimation_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 465
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1ae15930b89c5e7998b6ed48230b86f
+      internalID: 1236409582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BirdoAnimation_1
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 0
+        width: 465
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fe0c304b578f3ad5bec562a2db095c0
+      internalID: -1648457572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BirdoAnimation_2
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 0
+        width: 465
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30fe2bca190a19a8095cf0608d95cc2c
+      internalID: 453504910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BirdoAnimation_3
+      rect:
+        serializedVersion: 2
+        x: 1395
+        y: 0
+        width: 465
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57c7d39fbeedfaefba1a2f684ba20562
+      internalID: -1842695919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BirdoAnimation_4
+      rect:
+        serializedVersion: 2
+        x: 1860
+        y: 0
+        width: 465
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd42c94312cf444bbb8eca7a0b37e000
+      internalID: -1387679219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BirdoAnimation_5
+      rect:
+        serializedVersion: 2
+        x: 2325
+        y: 0
+        width: 465
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b51165dbce57564a89887686c9f895f
+      internalID: -1390362019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BirdoAnimation_6
+      rect:
+        serializedVersion: 2
+        x: 2790
+        y: 0
+        width: 465
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24ea9882e9c04d4d79df4a69c4070c4a
+      internalID: 1640162251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BirdoAnimation_7
+      rect:
+        serializedVersion: 2
+        x: 3255
+        y: 0
+        width: 465
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8212e51c1657a95b08e636400dc3683a
+      internalID: -986174207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BirdoAnimation_8
+      rect:
+        serializedVersion: 2
+        x: 3720
+        y: 0
+        width: 465
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ee11e3998046b5f1932abaea62e8487
+      internalID: 403793523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BirdoAnimation_9
+      rect:
+        serializedVersion: 2
+        x: 4185
+        y: 0
+        width: 465
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdda5c3e52b0034a9941baf947eefc0a
+      internalID: 1295107848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BirdoAnimation_10
+      rect:
+        serializedVersion: 2
+        x: 4650
+        y: 0
+        width: 465
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfc1aae6f2b57ea46b7892d89646a425
+      internalID: 1516451860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BirdoAnimation_11
+      rect:
+        serializedVersion: 2
+        x: 5115
+        y: 0
+        width: 465
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02fd93c6bafc77c14ade0add513b8ccd
+      internalID: -181960390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BirdoAnimation_12
+      rect:
+        serializedVersion: 2
+        x: 5580
+        y: 0
+        width: 465
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 377baae7a95220cd3bc37160ff77edf9
+      internalID: -1808697491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BirdoAnimation_13
+      rect:
+        serializedVersion: 2
+        x: 6045
+        y: 0
+        width: 465
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85a54e4bba797097c9ace46c5ac334aa
+      internalID: -1982740598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BirdoAnimation_14
+      rect:
+        serializedVersion: 2
+        x: 6510
+        y: 0
+        width: 465
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2583ec37d7fc19728cc2b9c54767aa7
+      internalID: 1129843627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BirdoAnimation_15
+      rect:
+        serializedVersion: 2
+        x: 6975
+        y: 0
+        width: 465
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cf5d4a5219b174c289aafb97f8662ad
+      internalID: 59253792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BirdoAnimation_16
+      rect:
+        serializedVersion: 2
+        x: 7440
+        y: 0
+        width: 465
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73785aae85a0553a9811dadeb9db5240
+      internalID: 122761853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BirdoAnimation_17
+      rect:
+        serializedVersion: 2
+        x: 7905
+        y: 0
+        width: 465
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71e1f72cacbc379c4bea3dc40db03356
+      internalID: -1836221099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BirdoAnimation_18
+      rect:
+        serializedVersion: 2
+        x: 8370
+        y: 0
+        width: 465
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ce268f56639cf8038a3b89d9a7cb142
+      internalID: 199039675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BirdoAnimation_19
+      rect:
+        serializedVersion: 2
+        x: 8835
+        y: 0
+        width: 465
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf5258a4e68ee06ae8383d622be2f0cd
+      internalID: -2007358523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BirdoAnimation_20
+      rect:
+        serializedVersion: 2
+        x: 9300
+        y: 0
+        width: 465
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53266cfbb30aa5e6d879924d4c946f17
+      internalID: -2086712697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BirdoAnimation_21
+      rect:
+        serializedVersion: 2
+        x: 9765
+        y: 0
+        width: 465
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50a5dadf3f66d464882064edde8cd3d1
+      internalID: 1173820919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BirdoAnimation_22
+      rect:
+        serializedVersion: 2
+        x: 10230
+        y: 0
+        width: 465
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d34c7da8a615087a0955c394a3685bab
+      internalID: -1823623647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BirdoAnimation_23
+      rect:
+        serializedVersion: 2
+        x: 10695
+        y: 0
+        width: 465
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7b477e88d059db26a614e08654d6769
+      internalID: -1856636423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BirdoAnimation_24
+      rect:
+        serializedVersion: 2
+        x: 11160
+        y: 0
+        width: 465
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6494e62a34290d349b9e523ef6541d3c
+      internalID: -1376071553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BirdoAnimation_25
+      rect:
+        serializedVersion: 2
+        x: 11625
+        y: 0
+        width: 465
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a200523178ac0a4db8d9008195953b15
+      internalID: -523484613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BirdoAnimation_26
+      rect:
+        serializedVersion: 2
+        x: 12090
+        y: 0
+        width: 465
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5172caa653c2a88baa61e74adaaeccf6
+      internalID: 1709160011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BirdoAnimation_27
+      rect:
+        serializedVersion: 2
+        x: 12555
+        y: 0
+        width: 465
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eccf35465ff915d83b10cc9d5e10d51d
+      internalID: 422894177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BirdoAnimation_28
+      rect:
+        serializedVersion: 2
+        x: 13020
+        y: 0
+        width: 465
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c82231a2c0ebcbb2191e6c295888daba
+      internalID: -1583682488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BirdoAnimation_29
+      rect:
+        serializedVersion: 2
+        x: 13485
+        y: 0
+        width: 465
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e38d9181fe94b96d484f0f37f13bed4b
+      internalID: 993368290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BirdoAnimation_30
+      rect:
+        serializedVersion: 2
+        x: 13950
+        y: 0
+        width: 465
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29550d2661cb80e67873eaa964929abd
+      internalID: -2099578999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BirdoAnimation_31
+      rect:
+        serializedVersion: 2
+        x: 14415
+        y: 0
+        width: 465
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46b853b381866f01e81790bf07498796
+      internalID: 566591642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BirdoAnimation_32
+      rect:
+        serializedVersion: 2
+        x: 14880
+        y: 0
+        width: 465
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09c518ef0fd549d5d84d7adedd601d04
+      internalID: 1386881172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      BirdoAnimation_0: 1236409582
+      BirdoAnimation_1: -1648457572
+      BirdoAnimation_10: 1516451860
+      BirdoAnimation_11: -181960390
+      BirdoAnimation_12: -1808697491
+      BirdoAnimation_13: -1982740598
+      BirdoAnimation_14: 1129843627
+      BirdoAnimation_15: 59253792
+      BirdoAnimation_16: 122761853
+      BirdoAnimation_17: -1836221099
+      BirdoAnimation_18: 199039675
+      BirdoAnimation_19: -2007358523
+      BirdoAnimation_2: 453504910
+      BirdoAnimation_20: -2086712697
+      BirdoAnimation_21: 1173820919
+      BirdoAnimation_22: -1823623647
+      BirdoAnimation_23: -1856636423
+      BirdoAnimation_24: -1376071553
+      BirdoAnimation_25: -523484613
+      BirdoAnimation_26: 1709160011
+      BirdoAnimation_27: 422894177
+      BirdoAnimation_28: -1583682488
+      BirdoAnimation_29: 993368290
+      BirdoAnimation_3: -1842695919
+      BirdoAnimation_30: -2099578999
+      BirdoAnimation_31: 566591642
+      BirdoAnimation_32: 1386881172
+      BirdoAnimation_4: -1387679219
+      BirdoAnimation_5: -1390362019
+      BirdoAnimation_6: 1640162251
+      BirdoAnimation_7: -986174207
+      BirdoAnimation_8: 403793523
+      BirdoAnimation_9: 1295107848
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
