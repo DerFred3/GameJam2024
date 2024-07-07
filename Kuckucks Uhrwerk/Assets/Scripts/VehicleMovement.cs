@@ -105,7 +105,7 @@ public class VehicleMovement : MonoBehaviour
     }
 
     private void MovePlatform_startPlayerMovement()
-    {
+    {   
         playerMoving = 1f;
     }
 }

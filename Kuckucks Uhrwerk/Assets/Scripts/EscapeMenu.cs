@@ -9,6 +9,7 @@ public class EscapeMenu : MonoBehaviour
     [SerializeField] private Button resumeButton;
     [SerializeField] private Button restartButton;
     [SerializeField] private Button quitButton;
+    [SerializeField] private int firstLevelBuildIndex;
 
     private bool menuActive = false;
 
@@ -65,7 +66,8 @@ public class EscapeMenu : MonoBehaviour
 
     private void RestartButton_OnClick()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(firstLevelBuildIndex);
     }
 
     private void QuitButton_OnClick()
