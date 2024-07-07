@@ -11,6 +11,7 @@ public class VehicleMovement : MonoBehaviour
 
     private float speedMultiplier;
     private float boostMultiplier = 0f;
+    private float playerMoving = 1f;
 
     public Vector3 velocityOffset = Vector3.zero;
 
@@ -22,6 +23,12 @@ public class VehicleMovement : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+    }
+
+    private void OnEnable()
+    {
+        MovePlatform.stopPlayerMovement.AddListener(MovePlatform_stopPlayerMovement);
+        MovePlatform.startPlayerMovement.AddListener(MovePlatform_startPlayerMovement);
     }
 
     private void FixedUpdate()
@@ -37,7 +44,7 @@ public class VehicleMovement : MonoBehaviour
         {
             speedMultiplier = crankHandle.GetCurrentValue(speedMultiplierMinimum, speedMultiplierMaximum);
 
-            rb.velocity = movementDirection * speedMultiplier * boostMultiplier * Time.deltaTime + velocityOffset;
+            rb.velocity = (movementDirection * speedMultiplier * boostMultiplier * Time.deltaTime + velocityOffset)* playerMoving;
         }
     }
 
@@ -62,6 +69,15 @@ public class VehicleMovement : MonoBehaviour
         }
     }
 
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        float angleOfPlatform = collision.transform.parent.eulerAngles.z % 360;
+        if (angleOfPlatform > 80f && angleOfPlatform < 270)
+        {
+            currentlyTouching.Remove(collision.gameObject);
+        }
+    }
+
     private void OnCollisionExit2D(Collision2D collision)
     {
         currentlyTouching.Remove(collision.gameObject);
@@ -77,5 +93,14 @@ public class VehicleMovement : MonoBehaviour
                 Debug.Log("Collision with object with tag: `" + collision.gameObject.tag + "` for which no interaction is specified!");
                 break;
         }
+    }
+
+    private void MovePlatform_stopPlayerMovement() {
+        playerMoving = 0f;
+    }
+
+    private void MovePlatform_startPlayerMovement()
+    {
+        playerMoving = 1f;
     }
 }
