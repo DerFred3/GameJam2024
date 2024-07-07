@@ -8,7 +8,7 @@ public class CameraFollow : MonoBehaviour
     [SerializeField] private CrankHandle speedCrank;
 
     private float followStiffnessMinimum = 1f;
-    private float followStiffnessMaximum = 3f;
+    private float followStiffnessMaximum = 2f;
 
     private void Update()
     {
